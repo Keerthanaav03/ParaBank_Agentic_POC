@@ -1,0 +1,34 @@
+Requirement ID,Module,Test Case ID,Title,Preconditions,Test Steps,Expected Result,Priority,Test Type,Automation Candidate
+KAN-2,Fund Transfer,TC_KAN2_001,Navigate to Transfer Funds Page,User is logged in,"1. Click on 'Transfer Funds' link",Transfer Funds page is displayed,High,Positive,Yes
+KAN-2,Fund Transfer,TC_KAN2_002,Transfer Funds with Valid Data,User is on Transfer Funds page with two accounts and sufficient balance,"1. Select valid From Account
+2. Select valid To Account (different from From Account)
+3. Enter valid transfer amount (greater than zero, less than or equal to balance)
+4. Click 'Transfer'",Funds are transferred and confirmation message is displayed,High,Positive,Yes
+KAN-2,Fund Transfer,TC_KAN2_003,Transfer Fails if Amount Field is Empty,User is on Transfer Funds page,"1. Select From Account and To Account
+2. Leave amount field empty
+3. Click 'Transfer'",Error message: Amount is required,High,Negative,Yes
+KAN-2,Fund Transfer,TC_KAN2_004,Transfer Fails if Amount is Zero,User is on Transfer Funds page,"1. Select From Account and To Account
+2. Enter 0 as amount
+3. Click 'Transfer'",Error message: Amount must be greater than zero,High,Negative,Yes
+KAN-2,Fund Transfer,TC_KAN2_005,Transfer Fails if Amount is Negative,User is on Transfer Funds page,"1. Select From Account and To Account
+2. Enter negative amount (e.g., -100)
+3. Click 'Transfer'",Error message: Amount must be greater than zero,High,Negative,Yes
+KAN-2,Fund Transfer,TC_KAN2_006,Transfer Fails if Source and Destination Accounts are Same,User is on Transfer Funds page,"1. Select same account for From Account and To Account
+2. Enter valid amount
+3. Click 'Transfer'",Error message: Source and destination accounts must be different,High,Negative,Yes
+KAN-2,Fund Transfer,TC_KAN2_007,Transfer Fails if Amount Exceeds Balance,User is on Transfer Funds page with insufficient balance,"1. Select From Account with insufficient balance
+2. Select To Account
+3. Enter amount greater than available balance
+4. Click 'Transfer'",Error message: Insufficient funds,High,Negative,Yes
+KAN-2,Fund Transfer,TC_KAN2_008,Transfer Fails if Invalid Numeric Value Entered,User is on Transfer Funds page,"1. Select From Account and To Account
+2. Enter invalid numeric value (e.g., letters, special characters) in amount field
+3. Click 'Transfer'",Error message: Invalid amount,Medium,Negative,Yes
+KAN-2,Fund Transfer,TC_KAN2_009,Boundary: Minimum Transfer Amount,User is on Transfer Funds page,"1. Enter minimum allowed transfer amount (e.g., $0.01)
+2. Select valid accounts
+3. Click 'Transfer'",Transfer succeeds if amount is valid, else error shown,Medium,Boundary,Yes
+KAN-2,Fund Transfer,TC_KAN2_010,Boundary: Maximum Transfer Amount,User is on Transfer Funds page with sufficient balance,"1. Enter maximum allowed transfer amount (equal to available balance)
+2. Select valid accounts
+3. Click 'Transfer'",Transfer succeeds if amount is valid, else error shown,Medium,Boundary,Yes
+KAN-2,Fund Transfer,TC_KAN2_011,Transfer with Decimal Amount,User is on Transfer Funds page,"1. Enter valid decimal amount (e.g., $100.50)
+2. Select valid accounts
+3. Click 'Transfer'",Transfer succeeds and amount is correctly debited/credited,Low,Positive,Yes

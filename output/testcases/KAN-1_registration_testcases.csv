@@ -1,0 +1,34 @@
+Requirement ID,Module,Test Case ID,Title,Preconditions,Test Steps,Expected Result,Priority,Test Type,Automation Candidate
+KAN-1,Registration,TC_KAN1_001,Navigate to Registration Page,User is on ParaBank home page,"1. Click on 'Register' link",Registration page is displayed,High,Positive,Yes
+KAN-1,Registration,TC_KAN1_002,Register with Valid Data,On registration page,"1. Enter valid First Name, Last Name, Address, City, State, Zip, Phone, SSN, unique Username, Password, Confirm Password
+2. Click 'Register'",User is registered and welcome message is shown,High,Positive,Yes
+KAN-1,Registration,TC_KAN1_003,Mandatory Field Validation,On registration page,"1. Leave one or more mandatory fields empty
+2. Click 'Register'",Error message for missing mandatory fields,High,Negative,Yes
+KAN-1,Registration,TC_KAN1_004,Username Uniqueness Validation,On registration page; username exists,"1. Enter all valid data but use an existing Username
+2. Click 'Register'",Error message: Username already exists,High,Negative,Yes
+KAN-1,Registration,TC_KAN1_005,Password and Confirm Password Mismatch,On registration page,"1. Enter valid data but different Password and Confirm Password
+2. Click 'Register'",Error: Passwords do not match,High,Negative,Yes
+KAN-1,Registration,TC_KAN1_006,Invalid Phone Number Format,On registration page,"1. Enter invalid phone number (e.g., letters or too short)
+2. Fill other fields validly
+3. Click 'Register'",Error: Invalid phone number format,Medium,Negative,Yes
+KAN-1,Registration,TC_KAN1_007,Invalid SSN Format,On registration page,"1. Enter invalid SSN (e.g., not 9 digits, contains letters)
+2. Fill other fields validly
+3. Click 'Register'",Error: Invalid SSN format,Medium,Negative,Yes
+KAN-1,Registration,TC_KAN1_008,Boundary: Minimum Length for Username,On registration page,"1. Enter username with minimum allowed length
+2. Fill other fields validly
+3. Click 'Register'",Registration succeeds if length is valid, else error shown,Medium,Boundary,Yes
+KAN-1,Registration,TC_KAN1_009,Boundary: Maximum Length for Username,On registration page,"1. Enter username with maximum allowed length
+2. Fill other fields validly
+3. Click 'Register'",Registration succeeds if length is valid, else error shown,Medium,Boundary,Yes
+KAN-1,Registration,TC_KAN1_010,Boundary: Minimum Length for Password,On registration page,"1. Enter password with minimum allowed length
+2. Fill other fields validly
+3. Click 'Register'",Registration succeeds if length is valid, else error shown,Medium,Boundary,Yes
+KAN-1,Registration,TC_KAN1_011,Boundary: Maximum Length for Password,On registration page,"1. Enter password with maximum allowed length
+2. Fill other fields validly
+3. Click 'Register'",Registration succeeds if length is valid, else error shown,Medium,Boundary,Yes
+KAN-1,Registration,TC_KAN1_012,Registration with Special Characters in Address Fields,On registration page,"1. Enter special characters in Address, City, State fields
+2. Fill other fields validly
+3. Click 'Register'",Registration succeeds if characters are allowed,Low,Negative,Yes
+KAN-1,Registration,TC_KAN1_013,Registration with Leading/Trailing Spaces in Input Fields,On registration page,"1. Enter leading/trailing spaces in input fields
+2. Fill other fields validly
+3. Click 'Register'",Spaces are trimmed and registration succeeds,Low,Negative,Yes
