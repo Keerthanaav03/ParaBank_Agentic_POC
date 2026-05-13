@@ -81,28 +81,6 @@ Generate:
 - Reusable step definitions
 - Maintainable scenarios
 
----
-
-# Test Case Export Format
-
-Generate test cases in table structure with:
-
-- Test Case ID
-- Module
-- Scenario
-- Preconditions
-- Test Steps
-- Expected Result
-- Priority
-- Test Type
-
-Compatible with:
-- Jira Xray
-- Zephyr
-- TestRail
-
----
-
 # MCP Workflow
 
 Workflow:
